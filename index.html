@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Star Wars - Fan Page">
+    <title>Star Wars - Fan Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="site-name">
+                <h1 class="site-title">Star Wars - Fan Page</h1>
+            </div>
+
+            <!-- Logo - centro -->
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <img src="./img/logo-sw-fp.png" alt="Star Wars Fan Page Logo" class="logo-image">
+                </a>
+            </div>
+
+            <!-- Menú de navegación - lado derecho -->
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="./index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="./pages/compras.html" class="nav-link">Comprar</a></li>
+                    <li><a href="./pages/ventas.html" class="nav-link">Vender</a></li>
+                    <li><a href="./pages/peliculas.html" class="nav-link">Peliculas</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="main-content">
+    <section class="hero" role="region" aria-label="Bienvenida">
+        <div class="hero-content">
+            <h2 class="hero-title">Bienvenido a Star Wars - Fan Page</h2>
+            <p class="hero-subtitle">Tu página de fans de Star Wars</p>
+            <p class="hero-description">Descubre nuestro contenido y comunidad</p>
+        </div>
+    </section>
+
+        <section class="opciones-principales" role="region" aria-label="Opciones principales">
+            <div class="section-header">
+                <h2 class="section-title">¿Qué deseas hacer?</h2>
+            </div>
+
+            <div class="opciones-grid">
+                <!-- Card: Comprar -->
+                <article class="opcion-card" data-option="compras">
+                    <h3 class="card-title">Comprar</h3>
+                    <p class="card-description">Pasate y revisa nuestro catalogo de merchandising</p>
+                    <a href="./pages/compras.html" class="btn-secondary" role="button">Ver Productos</a>
+                </article>
+
+                <!-- Card: Vender -->
+                <article class="opcion-card" data-option="ventas">
+                    <h3 class="card-title">Vender</h3>
+                    <p class="card-description">Publica tus productos en nuestra plataforma</p>
+                    <a href="./pages/ventas.html" class="btn-secondary" role="button">Comenzar a Vender</a>
+                </article>
+
+                <!-- Card: Peliculas -->
+                <article class="opcion-card" data-option="peliculas">
+                    <h3 class="card-title">Peliculas</h3>
+                    <p class="card-description">Descubre nuestras películas favoritas</p>
+                    <a href="./pages/peliculas.html" class="btn-secondary" role="button">Ver Películas</a>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2026 Star Wars - Fan Page. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

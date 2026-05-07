@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es-ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vende tus productos en Star Wars - Fan Page">
+    <title>Vender - Star Wars - Fan Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <!-- Nombre del sitio - lado izquierdo -->
+            <div class="site-name">
+                <h1 class="site-title">Star Wars - Fan Page</h1>
+            </div>
+
+            <!-- Logo - centro -->
+            <div class="logo">
+                <a href="../index.html" class="logo-link">
+                    <img src="../img/logo-sw-fp.png" alt="Star Wars - Fan Page Logo" class="logo-image">
+                </a>
+            </div>
+
+            <!-- Menú de navegación y usuario - lado derecho -->
+            <div class="nav-right">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="./compras.html" class="nav-link">Comprar</a></li>
+                    <li><a href="./ventas.html" class="nav-link active">Vender</a></li>
+                    <li><a href="./peliculas.html" class="nav-link">Peliculas</a></li>
+                </ul>
+
+            </div>
+        </nav>
+    </header>
+    <section class="page-header" role="region" aria-label="Encabezado de página">
+        <div class="page-header-content">
+            <h1 class="page-title">Publica Tus Productos</h1>
+            <p class="page-description">Comienza a vender tus productos en nuestra plataforma</p>
+        </div>
+    </section>
+    <main class="main-content">
+        <!-- Sección de formulario para publicar producto -->
+        <section class="product-form-section" role="region" aria-label="Formulario de publicación">
+            <div class="form-container">
+                <h2 class="form-title">Crear nueva publicación</h2>
+                
+                <form id="product-form" class="product-form">
+                    <!-- Nombre del producto -->
+                    <div class="form-group">
+                        <label for="product-name">Nombre del producto *</label>
+                        <input type="text" id="product-name" name="product-name" placeholder="Ej: Laptop Gaming" required>
+                    </div>
+
+                    <!-- Descripción -->
+                    <div class="form-group">
+                        <label for="product-description">Descripción *</label>
+                        <textarea id="product-description" name="product-description" rows="5" placeholder="Describe detalladamente tu producto" required></textarea>
+                    </div>
+
+                    <!-- Categoría -->
+                    <div class="form-group">
+                        <label for="product-category">Categoría *</label>
+                        <select id="product-category" name="product-category" required>
+                            <option value="">Selecciona una categoría</option>
+                            <option value="laptops">Laptops</option>
+                            <option value="smartphones">Smartphones</option>
+                            <option value="tablets">Tablets</option>
+                            <option value="accesorios">Accesorios</option>
+                        </select>
+                    </div>
+
+                    <!-- Precio -->
+                    <div class="form-group">
+                        <label for="product-price">Precio ($) *</label>
+                        <input type="number" id="product-price" name="product-price" step="0.01" min="0" placeholder="0.00\" required>
+                    </div>
+
+                    <!-- Stock -->
+                    <div class="form-group">
+                        <label for="product-stock">Stock disponible *</label>
+                        <input type="number" id="product-stock" name="product-stock" min="0\" placeholder="Cantidad disponible" required>
+                    </div>
+
+                    <!-- Estado del producto -->
+                    <div class="form-group">
+                        <label for="product-condition">Estado *</label>
+                        <select id="product-condition" name="product-condition" required>
+                            <option value="">Selecciona el estado</option>
+                            <option value="nuevo">Nuevo</option>
+                            <option value="como-nuevo">Como nuevo</option>
+                            <option value="usado">Usado</option>
+                            <option value="refurbished">Refurbished</option>
+                        </select>
+                    </div>
+
+                    <!-- Botones de acción -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Publicar producto</button>
+                        <button type="reset" class="btn-secondary">Limpiar formulario</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Sección de productos publicados -->
+        <section class="published-products" role="region" aria-label="Productos publicados">
+            <h2 class="section-title">Tus productos publicados</h2>
+            <div id="user-products" class="user-products-grid">
+                <!-- Los productos se cargarán aquí con JavaScript -->
+                <div class="empty-message">No has publicado productos aún</div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2026 Star Wars - Fan Page. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/pages/ventas.js"></script>
+</body>
+
+</html>

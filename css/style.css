@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+header {
+    padding: 20px;
+    padding-top: 80px; /* Espacio para la nav absoluta */
+    position: relative;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    position: relative;
+    left: 5vw;
+}
+
+.logo-image {
+    height: 20vh;
+    width: auto;
+    display: block;
+}
+
+.site-name {
+    justify-self: start;
+}
+
+.site-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    gap: 16px;
+}
+
+header nav{
+    display: grid;
+    grid-template-columns: auto 1.3fr auto;
+    background-color: #333;
+    color: #fff;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+main{
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+nav ul li {
+    margin-right: 20px;
+    a {
+        color: #fff;
+    }
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Estilos para las tarjetas de películas */
+.movies-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.movies-grid {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.movie-row {
+    display: grid;
+    grid-template-columns: repeat(3, 20vw);
+    gap: 20px;
+}
+
+.movie-row.row-two {
+    grid-template-columns: repeat(2, 20vw);
+}
+
+.movie-card {
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 320px;
+}
+
+.movie-poster {
+    background-color: #222;
+    width: 20vw;
+    height: 65vh;
+    margin: 0%;
+}
+
+.poster-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 4px 4px 0 0;
+}
+
+.movie-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.movie-content h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.movie-meta {
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+@media (max-width: 1080px) {
+    .movie-row {
+        grid-template-columns: repeat(2, 25vw);
+    }
+
+    .movie-poster {
+        width: 25vw;
+        height: 37.5vw;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+        text-align: center;
+    }
+
+    .logo-image {
+        height: 15vh;
+    }
+
+    .movie-row,
+    .movie-row.row-two {
+        grid-template-columns: 40vw;
+    }
+
+    .movie-poster {
+        width: 40vw;
+        height: 60vw;
+    }
+}
+
+/* Estilos para la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Para Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
