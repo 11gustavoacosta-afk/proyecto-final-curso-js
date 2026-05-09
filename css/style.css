@@ -218,3 +218,182 @@ html {
     scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
 }
 
+/* Estilos del botón de información API */
+.btn-info-api {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-info-api:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.btn-info-api:active {
+    transform: scale(0.98);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: #fff;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideIn 0.3s ease;
+    overflow-y: auto;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: transparent;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: #333;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #e74c3c;
+}
+
+.modal-body {
+    padding: 32px;
+}
+
+.modal-body h2 {
+    margin: 0 0 16px 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #333;
+    border-bottom: 2px solid #333;
+    padding-bottom: 12px;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.movie-details p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.movie-details strong {
+    color: #333;
+}
+
+.opening-crawl {
+    font-style: italic;
+    color: #555;
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-left: 4px solid #333;
+    margin-top: 8px !important;
+}
+
+.characters-section {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+}
+
+.characters-section h3 {
+    margin: 0 0 10px 0;
+    font-family: 'Orbitron', sans-serif;
+    color: #333;
+}
+
+.characters-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.characters-section li {
+    padding: 6px 0;
+    color: #555;
+    border-bottom: 1px solid #eee;
+}
+
+.characters-section li:last-child {
+    border-bottom: none;
+}
+
+.loading {
+    text-align: center;
+    color: #555;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+    }
+
+    .modal-body {
+        padding: 20px;
+    }
+
+    .opening-crawl {
+        font-size: 0.9rem;
+    }
+}
+
