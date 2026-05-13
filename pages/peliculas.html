@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guía cronológica de películas de Star Wars.">
+    <meta name="description" content="Guía cronológica de películas de Star Wars">
     <title>Películas - Star Wars - Fan Page</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -30,7 +30,6 @@
                 <ul class="nav-menu">
                     <li><a href="../index.html" class="nav-link">Inicio</a></li>
                     <li><a href="./compras.html" class="nav-link">Comprar</a></li>
-                    <li><a href="./ventas.html" class="nav-link">Vender</a></li>
                     <li><a href="./peliculas.html" class="nav-link active">Películas</a></li>
                 </ul>
 
@@ -48,7 +47,7 @@
     <main class="main-content">
         <section class="movies-section" role="region" aria-label="Películas de Star Wars">
             <h2 class="section-title">Orden cronológico</h2>
-            <p class="section-description">Cada carta presenta una película de la saga principal y las historias conectadas. Agrega las portadas y las críticas de IMDb cuando quieras.</p>
+            <p class="section-description">Cada carta presenta una película de la saga principal y las historias conectadas</p>
 
             <div class="movies-grid">
                 <div class="movie-row row-three">
@@ -58,11 +57,19 @@
                         </div>
                         <div class="movie-content">
                             <h3>Star Wars: Episodio I - La amenaza fantasma</h3>
-                            <p><strong>Año:</strong> 1999</p>
-                            <p><strong>Director:</strong> George Lucas</p>
-                            <p>La República se encuentra en crisis y los Jedi Qui-Gon Jinn y Obi-Wan Kenobi protegen a la joven Reina Amidala.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="1">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/es/title/tt0120915/?ref_=fn_i_7" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="1">Información</button>
+                        </div>
+                    </article>
+
+                    <article class="movie-card" data-swapi-id="2">
+                        <div class="movie-poster" aria-label="Portada de Star Wars Episodio II">
+                            <img src="../img/ep2.png" alt="Portada de Star Wars Episodio II" class="poster-image">
+                        </div>
+                        <div class="movie-content">
+                            <h3>Star Wars: Episodio II - El ataque de los clones</h3>
+                            <p class="movie-meta"><a href="https://www.imdb.com/title/tt0121765/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="2">Información</button>
                         </div>
                     </article>
 
@@ -72,13 +79,11 @@
                         </div>
                         <div class="movie-content">
                             <h3>Star Wars: Episodio III - La venganza de los Sith</h3>
-                            <p><strong>Año:</strong> 2005</p>
-                            <p><strong>Director:</strong> George Lucas</p>
-                            <p>Anakin Skywalker sucumbe al Lado Oscuro mientras el Imperio toma control de la galaxia.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="3">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/title/tt0121766/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="3">Información</button>
                         </div>
                     </article>
+                </div>
                 <div class="movie-row row-two">
                     <article class="movie-card" data-swapi-id="solo">
                         <div class="movie-poster" aria-label="Portada de Solo: Una historia de Star Wars">
@@ -86,11 +91,8 @@
                         </div>
                         <div class="movie-content">
                             <h3>Solo: Una historia de Star Wars</h3>
-                            <p><strong>Año:</strong> 2018</p>
-                            <p><strong>Directores:</strong> Ron Howard</p>
-                            <p>La historia de los primeros años de Han Solo antes de unirse a la Rebelión.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="solo">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/title/tt3778644/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="solo">Información</button>
                         </div>
                     </article>
 
@@ -100,25 +102,20 @@
                         </div>
                         <div class="movie-content">
                             <h3>Rogue One: Una historia de Star Wars</h3>
-                            <p><strong>Año:</strong> 2016</p>
-                            <p><strong>Director:</strong> Gareth Edwards</p>
-                            <p>Un grupo de rebeldes roba los planos de la Estrella de la Muerte y cambia el curso de la guerra.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="rogue-one">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/es/title/tt3748528/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="rogue-one">Información</button>
                         </div>
                     </article>
-                </div>                <div class="movie-row row-three">
+                </div>
+                <div class="movie-row row-three">
                     <article class="movie-card" data-swapi-id="4">
                         <div class="movie-poster" aria-label="Portada de Star Wars Episodio IV">
                             <img src="../img/ep4.png" alt="Portada de Star Wars Episodio IV" class="poster-image">
                         </div>
                         <div class="movie-content">
                             <h3>Star Wars: Episodio IV - Una nueva esperanza</h3>
-                            <p><strong>Año:</strong> 1977</p>
-                            <p><strong>Director:</strong> George Lucas</p>
-                            <p>Luke Skywalker comienza su aventura tras descubrir un mensaje de la Princesa Leia y unirse a la Rebelión.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="4">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/title/tt0076759/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="4">Información</button>
                         </div>
                     </article>
 
@@ -128,11 +125,8 @@
                         </div>
                         <div class="movie-content">
                             <h3>Star Wars: Episodio V - El Imperio contraataca</h3>
-                            <p><strong>Año:</strong> 1980</p>
-                            <p><strong>Director:</strong> Irvin Kershner</p>
-                            <p>La Rebelión sufre una derrota y Luke recibe entrenamiento Jedi del Maestro Yoda.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="5">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/title/tt0080684/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="5">Información</button>
                         </div>
                     </article>
 
@@ -142,25 +136,20 @@
                         </div>
                         <div class="movie-content">
                             <h3>Star Wars: Episodio VI - El retorno del Jedi</h3>
-                            <p><strong>Año:</strong> 1983</p>
-                            <p><strong>Director:</strong> Richard Marquand</p>
-                            <p>Luke enfrenta a Darth Vader mientras la Alianza Rebelde lanza un ataque final contra el Imperio.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="6">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/title/tt0086190/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="6">Información</button>
                         </div>
                     </article>
-                </div>                <div class="movie-row row-three">
+                </div> 
+                   <div class="movie-row row-three">
                     <article class="movie-card" data-swapi-id="7">
                         <div class="movie-poster" aria-label="Portada de Star Wars Episodio VII">
                             <img src="../img/ep7.png" alt="Portada de Star Wars Episodio VII" class="poster-image">
                         </div>
                         <div class="movie-content">
                             <h3>Star Wars: Episodio VII - El despertar de la Fuerza</h3>
-                            <p><strong>Año:</strong> 2015</p>
-                            <p><strong>Director:</strong> J.J. Abrams</p>
-                            <p>Una nueva heroína emerge para continuar la lucha contra una nueva amenaza galáctica.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="7">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/title/tt2488496/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="7">Información</button>
                         </div>
                     </article>
 
@@ -170,11 +159,8 @@
                         </div>
                         <div class="movie-content">
                             <h3>Star Wars: Episodio VIII - Los últimos Jedi</h3>
-                            <p><strong>Año:</strong> 2017</p>
-                            <p><strong>Director:</strong> Rian Johnson</p>
-                            <p>Luke entrena a Rey mientras la Resistencia intenta escapar de la Primera Orden.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="8">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/title/tt2527336/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="8">Información</button>
                         </div>
                     </article>
 
@@ -184,11 +170,8 @@
                         </div>
                         <div class="movie-content">
                             <h3>Star Wars: Episodio IX - El ascenso de Skywalker</h3>
-                            <p><strong>Año:</strong> 2019</p>
-                            <p><strong>Director:</strong> J.J. Abrams</p>
-                            <p>La Resistencia enfrenta a la Primera Orden en la batalla final mientras se revela un legado oculto.</p>
-                            <p class="movie-meta">IMDb: pendiente</p>
-                            <button class="btn-info-api" data-episode="9">Ver información API</button>
+                            <p class="movie-meta"><a href="https://www.imdb.com/title/tt2527338/?ref_=fn_i_1" class="nav-link" target="_blank" rel="noopener noreferrer">Ver en IMDb</a></p>
+                            <button class="btn-info-api" data-episode="9">Información</button>
                         </div>
                     </article>
                 </div>
@@ -203,7 +186,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/pages/peliculas.js"></script>
 </body>
 
 </html>

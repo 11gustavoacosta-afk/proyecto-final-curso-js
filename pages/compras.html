@@ -13,24 +13,19 @@
 
     <header class="site-header">
         <nav class="navbar" role="navigation" aria-label="Navegación principal">
-            <!-- Nombre del sitio - lado izquierdo -->
             <div class="site-name">
                 <h1 class="site-title">Star Wars - Fan Page</h1>
             </div>
 
-            <!-- Logo - centro -->
             <div class="logo">
                 <a href="../index.html" class="logo-link">
                     <img src="../img/logo-sw-fp.png" alt="Star Wars - Fan Page Logo" class="logo-image">
                 </a>
             </div>
-
-            <!-- Menú de navegación y usuario - lado derecho -->
             <div class="nav-right">
                 <ul class="nav-menu">
                     <li><a href="../index.html" class="nav-link">Inicio</a></li>
                     <li><a href="./compras.html" class="nav-link active">Comprar</a></li>
-                    <li><a href="./ventas.html" class="nav-link">Vender</a></li>
                     <li><a href="./peliculas.html" class="nav-link">Peliculas</a></li>
                 </ul>
 
@@ -46,7 +41,6 @@
     </section>
 
     <main class="main-content">
-        <!-- Barra de búsqueda y filtros -->
         <section class="search-filters" role="region" aria-label="Búsqueda y filtros">
             <div class="search-bar">
                 <input type="search" id="search-input" class="search-input" placeholder="Buscar productos..." aria-label="Buscar productos">
@@ -55,10 +49,10 @@
             <div class="filters">
                 <select id="category-filter" class="filter-select" aria-label="Filtrar por categoría">
                     <option value="">Todas las categorías</option>
-                    <option value="laptops">Laptops</option>
-                    <option value="smartphones">Smartphones</option>
-                    <option value="tablets">Tablets</option>
-                    <option value="accesorios">Accesorios</option>
+                    <option value="remeras">Remeras</option>
+                    <option value="pantalones">Pantalones</option>
+                    <option value="gorras">Gorras</option>
+                    <option value="zapatillas">Zapatillas</option>
                 </select>
                 <select id="price-filter" class="filter-select" aria-label="Filtrar por precio">
                     <option value="">Todos los precios</option>
@@ -69,18 +63,34 @@
             </div>
         </section>
 
-        <!-- Grid de productos -->
+        <div id="cart-fab" class="cart-fab" role="button" tabindex="0" aria-label="Abrir carrito de compras">
+            <img src="../img/carrito.png" alt="Carrito" class="cart-fab-icon">
+            <span id="cart-badge" class="cart-badge">0</span>
+        </div>
+
+        <div id="cart-modal" class="cart-modal hidden">
+            <div class="cart-modal-header">
+                <h2>Carrito</h2>
+                <button id="cart-close" type="button" class="cart-close-btn" aria-label="Cerrar carrito">×</button>
+            </div>
+            <div id="cart-items" class="cart-modal-items">
+                <p class="cart-empty">El carrito está vacío.</p>
+            </div>
+            <div class="cart-modal-footer">
+                <p>Total: <span id="cart-total">$0</span></p>
+                <button id="clear-cart-btn" class="clear-cart-btn-class" type="button">Vaciar carrito</button>
+                <button id="checkout-btn" class="btn-primary" type="button">Finalizar compra</button>
+            </div>
+        </div>
+
         <section class="productos-section" role="region" aria-label="Productos disponibles">
             <div id="productos-grid" class="productos-grid">
-                <!-- Los productos se cargarán aquí con JavaScript -->
                 <div class="loading-message">Cargando productos...</div>
             </div>
         </section>
 
-        <!-- Paginación -->
         <section class="pagination-section" role="region" aria-label="Paginación">
             <div id="pagination" class="pagination">
-                <!-- Los botones de paginación se cargarán aquí con JavaScript -->
             </div>
         </section>
     </main>
@@ -92,7 +102,6 @@
     </footer>
 
     <script src="../js/main.js"></script>
-    <script src="../js/pages/compras.js"></script>
 </body>
 
 </html>
