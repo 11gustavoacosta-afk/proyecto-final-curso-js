@@ -93,7 +93,9 @@ function loadPageScript() {
   let scriptPath = "";
   if (currentUrl.includes("/pages/compras.html") || currentUrl.endsWith("compras.html")) {
     scriptPath = "../js/pages/compras.js";
-  } else if (currentUrl.includes("/pages/peliculas.html") || currentUrl.endsWith("peliculas.html")) {
+  }
+   else if (currentUrl.includes("/pages/peliculas.html") || currentUrl.endsWith("peliculas.html")) 
+    {
     scriptPath = "../js/pages/peliculas.js";
   }
 
