@@ -1,46 +1,46 @@
-const SWAPI_BASE_URL = 'https://swapi.online/api/films';
+const SWAPI_BASE_URL = "https://swapi.online/api/films";
 
 const episodeMap = {
-    '1': 'The Phantom Menace',
-    '2': 'Attack of the Clones',
-    '3': 'Revenge of the Sith',
-    '4': 'A New Hope',
-    '5': 'The Empire Strikes Back',
-    '6': 'Return of the Jedi',
-    '7': 'The Force Awakens',
-    '8': 'The Last Jedi',
-    '9': 'The Rise of Skywalker',
-    'solo': 'Solo',
-    'rogue-one': 'Rogue One'
+    "1": "The Phantom Menace",
+    "2": "Attack of the Clones",
+    "3": "Revenge of the Sith",
+    "4": "A New Hope",
+    "5": "The Empire Strikes Back",
+    "6": "Return of the Jedi",
+    "7": "The Force Awakens",
+    "8": "The Last Jedi",
+    "9": "The Rise of Skywalker",
+    "solo": "Solo",
+    "rogue-one": "Rogue One"
 };
 
 const translationMap = {
-    'title': 'Título',
-    'director': 'Director',
-    'producer': 'Productor',
-    'producers': 'Productores',
-    'release_date': 'Año de lanzamiento',
-    'opening_crawl': 'Descripción de apertura',
-    'characters': 'Personajes',
-    'planets': 'Planetas',
-    'vehicles': 'Vehículos',
-    'starships': 'Naves espaciales',
-    'species': 'Especies'
+    "title": "Título",
+    "director": "Director",
+    "producer": "Productor",
+    "producers": "Productores",
+    "release_date": "Año de lanzamiento",
+    "opening_crawl": "Descripción de apertura",
+    "characters": "Personajes",
+    "planets": "Planetas",
+    "vehicles": "Vehículos",
+    "starships": "Naves espaciales",
+    "species": "Especies"
 };
 
 function translateMovieData(data) {
     const translated = { ...data };
     
     const titleTranslations = {
-        'The Phantom Menace': 'La amenaza fantasma',
-        'Attack of the Clones': 'El ataque de los clones',
-        'Revenge of the Sith': 'La venganza de los Sith',
-        'A New Hope': 'Una nueva esperanza',
-        'The Empire Strikes Back': 'El Imperio contraataca',
-        'Return of the Jedi': 'El retorno del Jedi',
-        'The Force Awakens': 'El despertar de la Fuerza',
-        'The Last Jedi': 'Los últimos Jedi',
-        'The Rise of Skywalker': 'El ascenso de Skywalker'
+        "The Phantom Menace": "La amenaza fantasma",
+        "Attack of the Clones": "El ataque de los clones",
+        "Revenge of the Sith": "La venganza de los Sith",
+        "A New Hope": "Una nueva esperanza",
+        "The Empire Strikes Back": "El Imperio contraataca",
+        "Return of the Jedi": "El retorno del Jedi",
+        "The Force Awakens": "El despertar de la Fuerza",
+        "The Last Jedi": "Los últimos Jedi",
+        "The Rise of Skywalker": "El ascenso de Skywalker"
     };
     
     if (translated.title && titleTranslations[translated.title]) {
@@ -51,9 +51,9 @@ function translateMovieData(data) {
 }
 
 function createModal() {
-    const modal = document.createElement('div');
-    modal.id = 'info-modal';
-    modal.className = 'modal';
+    const modal = document.createElement("div");
+    modal.id = "info-modal";
+    modal.className = "modal";
     modal.innerHTML = `
         <div class="modal-content">
             <button class="modal-close">&times;</button>
@@ -67,7 +67,7 @@ function createModal() {
 }
 
 function getModal() {
-    let modal = document.getElementById('info-modal');
+    let modal = document.getElementById("info-modal");
     if (!modal) {
         modal = createModal();
     }
@@ -76,18 +76,18 @@ function getModal() {
 
 function showModal() {
     const modal = getModal();
-    modal.style.display = 'flex';
+    modal.style.display = "flex";
 }
 
 function closeModal() {
     const modal = getModal();
-    modal.style.display = 'none';
+    modal.style.display = "none";
 }
 async function fetchMovieInfo(movieTitle) {
     try {
         const response = await fetch(SWAPI_BASE_URL);
         if (!response.ok) {
-            throw new Error('No se pudo conectar con SWAPI');
+            throw new Error("No se pudo conectar con SWAPI");
         }
         const data = await response.json();
  
@@ -101,14 +101,14 @@ async function fetchMovieInfo(movieTitle) {
         
         return movie;
     } catch (error) {
-        console.error('Error al obtener información de SWAPI:', error);
+        console.error("Error al obtener información de SWAPI:", error);
         throw error;
     }
 }
 
 async function displayMovieInfo(episode, movieTitle) {
     showModal();
-    const modalBody = document.getElementById('modal-body');
+    const modalBody = document.getElementById("modal-body");
     
     if (!movieTitle) {
         modalBody.innerHTML = `
@@ -128,11 +128,11 @@ async function displayMovieInfo(episode, movieTitle) {
             return;
         }
         movieData = translateMovieData(movieData);
-        const releaseDate = movieData.release_date || 'No disponible';
-        const director = movieData.director || 'No disponible';
-        const producer = movieData.producer || movieData.producers || 'No disponible';
-        const openingCrawl = movieData.opening_crawl || 'No disponible';
-        let charactersHTML = '';
+        const releaseDate = movieData.release_date || "No disponible";
+        const director = movieData.director || "No disponible";
+        const producer = movieData.producer || movieData.producers || "No disponible";
+        const openingCrawl = movieData.opening_crawl || "No disponible";
+        let charactersHTML = "";
         if (movieData.characters && movieData.characters.length > 0) {
             const characterNames = movieData.characters.slice(0, 10);
             charactersHTML = `
@@ -140,18 +140,18 @@ async function displayMovieInfo(episode, movieTitle) {
                     <h3>Personajes principales:</h3>
                     <ul>
                         ${characterNames.map(char => {
-                            const charName = typeof char === 'string' ? 
-                                char.split('/').filter(p => p).pop() : 
-                                (char.name || 'Desconocido');
+                            const charName = typeof char === "string" ? 
+                                char.split("/").filter(p => p).pop() : 
+                                (char.name || "Desconocido");
                             return `<li>${charName}</li>`;
-                        }).join('')}
+                        }).join("")}
                     </ul>
                 </div>
             `;
         }
 
         modalBody.innerHTML = `
-            <h2>${movieData.title || 'Película desconocida'}</h2>
+            <h2>${movieData.title || "Película desconocida"}</h2>
             <div class="movie-details">
                 <p><strong>Año de lanzamiento:</strong> ${releaseDate}</p>
                 <p><strong>Director:</strong> ${director}</p>
@@ -170,36 +170,36 @@ async function displayMovieInfo(episode, movieTitle) {
 }
 
 function initMoviePage() {
-    const buttons = document.querySelectorAll('.btn-info-api');
+    const buttons = document.querySelectorAll(".btn-info-api");
     
     buttons.forEach(button => {
-        button.addEventListener('click', async () => {
-            const episode = button.getAttribute('data-episode');
+        button.addEventListener("click", async () => {
+            const episode = button.getAttribute("data-episode");
             const movieTitle = episodeMap[episode];
             await displayMovieInfo(episode, movieTitle);
         });
     });
 
     const modal = getModal();
-    const closeBtn = modal.querySelector('.modal-close');
+    const closeBtn = modal.querySelector(".modal-close");
     
-    closeBtn.addEventListener('click', closeModal);
+    closeBtn.addEventListener("click", closeModal);
 
-    modal.addEventListener('click', (e) => {
+    modal.addEventListener("click", (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
 
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
             closeModal();
         }
     });
 }
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initMoviePage);
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMoviePage);
 } else {
     initMoviePage();
 } 

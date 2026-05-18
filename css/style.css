@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
 
 
 
@@ -12,13 +12,13 @@ body {
 
 header {
     padding: 20px;
-    padding-top: 80px; /* Espacio para la nav absoluta */
+    padding-top: 80px;
     position: relative;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
 .page-header {
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
 .logo-image {
@@ -36,7 +36,7 @@ header {
     font-weight: bold;
     color: #fff;
     margin: 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
 .nav-menu {
@@ -71,7 +71,7 @@ header nav{
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
 header .logo {
@@ -100,7 +100,7 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
 }
 
 .movies-section {
@@ -208,7 +208,7 @@ nav a {
     padding: 10px 16px;
     border-radius: 8px;
     cursor: pointer;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 0.9rem;
     transition: background-color 0.25s ease, transform 0.2s ease;
 }
@@ -309,7 +309,7 @@ nav a {
     padding: 10px 16px;
     border-radius: 8px;
     cursor: pointer;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 0.9rem;
     transition: background-color 0.25s ease, transform 0.2s ease;
 }
@@ -320,7 +320,7 @@ nav a {
     padding: 10px 16px;
     border-radius: 8px;
     cursor: pointer;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 0.9rem;
     transition: background-color 0.25s ease, transform 0.2s ease;
 }
@@ -574,7 +574,7 @@ html {
     padding: 10px 16px;
     border-radius: 6px;
     cursor: pointer;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     font-size: 0.9rem;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -645,7 +645,7 @@ html {
 
 .modal-body h2 {
     margin: 0 0 16px 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     color: #333;
     border-bottom: 2px solid #333;
     padding-bottom: 12px;
@@ -683,7 +683,7 @@ html {
 
 .characters-section h3 {
     margin: 0 0 10px 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: "Orbitron", sans-serif;
     color: #333;
 }
 

@@ -1,4 +1,4 @@
-const CartStorageKey = 'starwars_fanpage_carrito';
+const CartStorageKey = "starwars_fanpage_carrito";
 
 const Cart = {
   storageKey: CartStorageKey,
@@ -8,7 +8,7 @@ const Cart = {
       const raw = localStorage.getItem(this.storageKey);
       return raw ? JSON.parse(raw) : [];
     } catch (error) {
-      console.error('Error leyendo el carrito desde localStorage:', error);
+      console.error("Error leyendo el carrito desde localStorage:", error);
       return [];
     }
   },
@@ -18,7 +18,7 @@ const Cart = {
       localStorage.setItem(this.storageKey, JSON.stringify(items));
       this.notify(items);
     } catch (error) {
-      console.error('Error guardando el carrito en localStorage:', error);
+      console.error("Error guardando el carrito en localStorage:", error);
     }
   },
 
@@ -65,7 +65,7 @@ const Cart = {
   },
 
   notify(items) {
-    window.dispatchEvent(new CustomEvent('cartUpdated', {
+    window.dispatchEvent(new CustomEvent("cartUpdated", {
       detail: { items },
     }));
   },
@@ -73,16 +73,16 @@ const Cart = {
 
 window.Cart = Cart;
 
-window.addEventListener('storage', (event) => {
+window.addEventListener("storage", (event) => {
   if (event.key === Cart.storageKey) {
     Cart.notify(Cart.load());
   }
 });
 
 window.formatCurrency = function (value) {
-  return value.toLocaleString('es-AR', {
-    style: 'currency',
-    currency: 'ARS',
+  return value.toLocaleString("es-AR", {
+    style: "currency",
+    currency: "ARS",
     minimumFractionDigits: 0,
   });
 };
@@ -90,30 +90,30 @@ window.formatCurrency = function (value) {
 
 function loadPageScript() {
   const currentUrl = window.location.href;
-  let scriptPath = '';
-  if (currentUrl.includes('/pages/compras.html') || currentUrl.endsWith('compras.html')) {
-    scriptPath = '../js/pages/compras.js';
-  } else if (currentUrl.includes('/pages/peliculas.html') || currentUrl.endsWith('peliculas.html')) {
-    scriptPath = '../js/pages/peliculas.js';
+  let scriptPath = "";
+  if (currentUrl.includes("/pages/compras.html") || currentUrl.endsWith("compras.html")) {
+    scriptPath = "../js/pages/compras.js";
+  } else if (currentUrl.includes("/pages/peliculas.html") || currentUrl.endsWith("peliculas.html")) {
+    scriptPath = "../js/pages/peliculas.js";
   }
 
   if (scriptPath) {
-    console.log('Cargando script de página:', scriptPath);
+    console.log("Cargando script de página:", scriptPath);
     loadScript(scriptPath);
   } else {
-    console.log('No se detectó una página con scripts dinámicos');
+    console.log("No se detectó una página con scripts dinámicos");
   }
 }
 
 function loadScript(src) {
-  const script = document.createElement('script');
+  const script = document.createElement("script");
   script.src = src;
   script.async = false;
   document.head.appendChild(script);
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', loadPageScript);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", loadPageScript);
 } else {
   loadPageScript();
 }
