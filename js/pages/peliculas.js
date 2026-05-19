@@ -96,7 +96,7 @@ async function fetchMovieInfo(movieTitle) {
         );
         
         if (!movie) {
-            return null; // No lanzar error, devolver null
+            return null;
         }
         
         return movie;
